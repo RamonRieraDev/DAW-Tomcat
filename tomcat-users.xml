@@ -1,0 +1,19 @@
+<tomcat-users xmlns="http://tomcat.apache.org/xml" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd" 
+              version="1.0">
+
+    <!-- Definir roles -->
+    <role rolename="manager-gui"/>
+    <role rolename="admin-gui"/>
+    
+    <!-- Definir usuarios con sus roles -->
+    <!-- Usuario administrador completo -->
+    <user username="admin" password="1234" roles="manager-gui,admin-gui"/>
+
+    <!-- Usuario con rol solo para administración -->
+    <user username="usuarioAdmin" password="admin123" roles="admin-gui"/>
+    
+    <!-- Usuario con rol solo para gestión de aplicaciones -->
+    <user username="usuarioManager" password="manager123" roles="manager-gui"/>
+</tomcat-users>
